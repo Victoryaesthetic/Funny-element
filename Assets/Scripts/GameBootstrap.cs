@@ -36,8 +36,10 @@ namespace FunnyElement
             MakeBlock("Exit island", new Vector2(8.7f, -1.0f), new Vector2(3.5f, 0.7f), new Color(0.34f, 0.39f, 0.48f));
             MakeBlock("Step", new Vector2(-1.9f, -1.1f), new Vector2(1.0f, 0.35f), new Color(0.42f, 0.47f, 0.55f));
             MakeBlock("Step", new Vector2(2.2f, 0.1f), new Vector2(1.0f, 0.35f), new Color(0.42f, 0.47f, 0.55f));
+
             MakeHazard("Warm hazard", new Vector2(-4.2f, -1.55f), new Vector2(1.1f, 0.16f), ElementKind.Water, new Color(0.96f, 0.30f, 0.12f));
             MakeHazard("Cool hazard", new Vector2(8.1f, -0.45f), new Vector2(1.0f, 0.16f), ElementKind.Fire, new Color(0.15f, 0.62f, 0.95f));
+
             MakePlayer("Ember", ElementKind.Fire, new Vector2(-6.0f, -1.0f), new Color(1f, 0.42f, 0.18f), 0);
             MakePlayer("Ripple", ElementKind.Water, new Vector2(-4.8f, -1.0f), new Color(0.24f, 0.68f, 1f), 1);
             MakeGoal(new Vector2(8.7f, -0.05f));
@@ -95,8 +97,10 @@ namespace FunnyElement
             var scaler = canvasObject.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1280, 720);
+
             if (FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>() == null)
                 new GameObject("EventSystem", typeof(UnityEngine.EventSystems.EventSystem), typeof(UnityEngine.EventSystems.StandaloneInputModule));
+
             AddButton(canvas.transform, "P1 ◀", 0, TouchAction.Left, new Vector2(0.06f, 0.12f));
             AddButton(canvas.transform, "P1 ▶", 0, TouchAction.Right, new Vector2(0.15f, 0.12f));
             AddButton(canvas.transform, "P1 ▲", 0, TouchAction.Jump, new Vector2(0.24f, 0.12f));
@@ -114,6 +118,7 @@ namespace FunnyElement
             rect.sizeDelta = new Vector2(92f, 72f);
             button.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.42f);
             button.GetComponent<TouchButton>().Setup(player, action);
+
             var textObject = new GameObject("Label", typeof(RectTransform), typeof(CanvasRenderer), typeof(Text));
             textObject.transform.SetParent(button.transform, false);
             var text = textObject.GetComponent<Text>();
