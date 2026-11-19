@@ -124,7 +124,7 @@ namespace FunnyElement
             var text = textObject.GetComponent<Text>();
             text.text = label;
             text.alignment = TextAnchor.MiddleCenter;
-            text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             text.color = Color.white;
             text.fontSize = 22;
             text.rectTransform.anchorMin = Vector2.zero;
