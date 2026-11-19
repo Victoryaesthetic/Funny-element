@@ -48,7 +48,7 @@ namespace FunnyElement
             if (!jumpRequested) return;
             jumpRequested = false;
 
-            if (Physics.Raycast(transform.position, Vector3.down, 0.62f, ~0, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(transform.position, Vector3.down, 1.1f, ~0, QueryTriggerInteraction.Ignore))
                 body.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
         }
     }
