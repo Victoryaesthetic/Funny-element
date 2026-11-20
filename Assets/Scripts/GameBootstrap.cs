@@ -40,8 +40,8 @@ namespace FunnyElement
             MakeHazard("Warm hazard", new Vector2(-4.2f, -1.55f), new Vector2(1.1f, 0.16f), ElementKind.Water, new Color(0.96f, 0.30f, 0.12f));
             MakeHazard("Cool hazard", new Vector2(8.1f, -0.45f), new Vector2(1.0f, 0.16f), ElementKind.Fire, new Color(0.15f, 0.62f, 0.95f));
 
-            MakePlayer("Ember", ElementKind.Fire, new Vector2(-6.0f, -1.0f), new Color(1f, 0.42f, 0.18f), 0);
-            MakePlayer("Ripple", ElementKind.Water, new Vector2(-4.8f, -1.0f), new Color(0.24f, 0.68f, 1f), 1);
+            MakePlayer("Ember", ElementKind.Fire, new Vector2(-6.0f, -1.0f), Color.red, 0);
+            MakePlayer("Ripple", ElementKind.Water, new Vector2(-4.8f, -1.0f), Color.blue, 1);
             MakeGoal(new Vector2(8.7f, -0.05f));
         }
 
