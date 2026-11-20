@@ -52,6 +52,7 @@ namespace FunnyElement
             block.transform.position = position;
             block.transform.localScale = new Vector3(size.x, size.y, 1f);
             block.GetComponent<Renderer>().material.color = color;
+            Debug.Log(name + " color: " + color);
         }
 
         private static void MakeHazard(string name, Vector2 position, Vector2 size, ElementKind safeFor, Color color)
